@@ -1,3 +1,17 @@
 .logo img {
     height: 40px;
 }
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espacio entre items */
+    list-style: none; /* saca los puntitos */
+    margin: 0;
+    padding: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
