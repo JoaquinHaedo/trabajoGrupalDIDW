@@ -1,49 +1,210 @@
-.logo img {
-    height: 40px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
 }
 
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* espacio entre items */
-    list-style: none; /* saca los puntitos */
-    margin: 0;
-    padding: 10px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
-    justify-content: space-between;
+/* BODY */
+
+body{
+    background:#eef3f8;
 }
 
-nav a {
-    text-decoration: none;
-    color: black;
+/* =========================
+        NAVBAR
+========================= */
+
+.navbar{
+
+    width:100%;
+    height:90px;
+
+    background:linear-gradient(90deg,#0057b8,#0084e6);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.20);
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
 }
 
-h1{
-    font-family: Arial, Helvetica, sans-serif;
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    height:100%;
 }
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
+.logo img{
+    width:60px;
+    height:60px;
+
+    object-fit:contain;
+
+    display:block;
 }
 
-.contenedorPrincipal{
-    max-width: 1000px;   /* ancho máximo de la página */
-    margin: 0 auto;      /* centra horizontalmente */
-    padding: 0 20px;     /* espacio a los costados */
-    text-align: center
-}
-.tarifa-texto {
-    border: 4px solid #1a2a5c;
-    padding: 15px;
-    border-radius: 12px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    max-width: 544px;
-    margin: 20px auto;
+.logo h2{
+    color:white;
+    font-size:1.8rem;
+    font-weight:700;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+/* LINKS */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+
+    list-style:none;
+
+    gap:20px;
+}
+
+.nav-links a{
+ color:white;
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    font-size:1.05rem;
+    font-weight:600;
+
+    transition:0.3s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height:50px;
+}
+
+/* HOVER */
+
+.nav-links a:hover{
+
+    background:rgba(255,255,255,0.15);
+
+}
+
+/* BOTON ACTIVO */
+
+.nav-links a.active{
+    background:#1ea7ff;
+    color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.20);
+
+}
+
+/* =========================
+        HERO
+========================= */
+
+.hero{
+
+    text-align:center;
+
+    padding:60px 20px;
+}
+
+/* TITULO */
+
+.hero h1{
+    font-size:4rem;
+    color:#0b1d45;
+    margin-bottom:15px;
+}
+
+/* TEXTO */
+.hero p{
+    font-size:1.5rem;
+    color:#394b6a;
+    margin-bottom:25px;
+}
+
+/* LINEA */
+.linea{
+    width:90px;
+    height:5px;
+    background:#1ea7ff;
+    margin:0 auto 40px auto;
+    border-radius:10px;
+}
+
+/* IMAGEN */
+.hero img{
+    width:80%;
+    border-radius:25px;
+    display:block;
+    margin:auto;
+    box-shadow:0 8px 20px rgba(0,0,0,0.20);
+}
+
+/* =========================
+      FORMULARIO CONTACTO
+========================= */
+.formulario-contacto{
+    width:100%;
+    max-width:700px;
+    margin:40px auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.10);
+}
+
+/* INPUTS */
+.formulario-contacto input,
+.formulario-contacto textarea{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:15px;
+    background:#f1f5fa;
+    font-size:1rem;
+    outline:none;
+    transition:0.3s;
+}
+
+/* EFECTO AL ESCRIBIR */
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus{
+    background:white;
+    box-shadow:0 0 0 3px #1ea7ff55;
+}
+
+/* BOTON */
+.formulario-contacto button{
+    background:linear-gradient(90deg,#0057b8,#0084e6);
+    color:white;
+    border:none;
+    padding:18px;
+    border-radius:15px;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* HOVER BOTON */
+
+.formulario-contacto button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.20);
 }

@@ -1,71 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trenes Sarmiento</title>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Tarifas - Trenes Sarmiento</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-    <div class= "contenedorPrincipal">
-    <header>
-        <nav>
-            <ul>
+    <div class="contenedorPrincipal">
+        <!-- NAVBAR -->
+        <header>
+
+            <nav class="navbar">
+                <!-- LOGO -->
                 <div class="logo">
-                    <img src="img/iconotrensarmiento.png" alt="IconoTren">
+                    <img src="img/iconotrensarmiento.png"
+                    alt="Icono Tren">
                 </div>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="TrenesEnTiempoReal.html">Trenes en tiempo real</a>
-                </li>
-                <li>
-                    <a href="MapaDelRecorrido.html">Mapa del recorrido</a>
-                </li>
-                <li>
-                    Tarifas
-                </li>
-                <li>
-                    <a href="Contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-        <h1>
-            Tarifas
-        </h1>
-    </header>
-    <main>
-    <p>
-        Revisá las tarifas de la Línea Sarmiento y conocé cuánto cuesta tu traslado según la distancia.
-    </p>
-    <p>
-        <img src="img/tarifas.jpg" alt="">
-    </p>
-    <div class="tarifa-texto">
-  <p>
-    Con tarjeta SUBE no registrada abonás el doble de la tarifa correspondiente a cada sección.
-  </p>
+                <!-- LINKS -->
+                <ul class="nav-links">
 
-  <p>
-    Con la Tarifa Social Federal, viajás con un 55% de descuento.
-  </p>
-</div>
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
 
-    <h3>
-        Multa
-    </h3>
-    <p>
-        Pasajero que no acredite haber pagado correctamente, con boleto de fecha vencida o boleto de valor inferior al
-correspondiente y/o no se ajuste el usuario a las condiciones de su emisión, se le impondrá una multa de: $ 2.800 ARS.
-    </p>
+                    <li>
+                        <a href="TrenesEnTiempoReal.html">
+                            Trenes en tiempo real
+                        </a>
+                    </li>
 
+                    <li>
+                        <a href="MapaDelRecorrido.html">
+                            Mapa del recorrido
+                        </a>
+                    </li>
 
+                    <li>
+                        <a class="active"
+                        href="Tarifas.html">
+                            Tarifas
+                        </a>
+                    </li>
 
-    </main>
-    <footer>
-        Todos los derechos reservados - República Argentina @2026.
-    </footer>
+                    <li>
+                        <a href="Contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- MAIN -->
+
+        <main class="hero">
+
+            <h1>
+                Tarifas
+            </h1>
+
+            <p>
+                Revisá las tarifas de la Línea
+                Sarmiento y conocé cuánto cuesta
+                tu traslado según la distancia.
+            </p>
+
+            <div class="linea"></div>
+
+            <img src="img/tarifas.jpg"
+            alt="Tarifas Tren Sarmiento">
+
+            <div class="tarifa-texto">
+
+                <p>
+                    Con tarjeta SUBE no registrada
+                    abonás el doble de la tarifa
+                    correspondiente a cada sección.
+                </p>
+
+                <p>
+                    Con la Tarifa Social Federal,
+                    viajás con un 55% de descuento.
+                </p>
+
+            </div>
+
+            <h3>
+                Multa
+            </h3>
+            <p>
+                Pasajero que no acredite haber
+                pagado correctamente, con boleto
+                de fecha vencida o boleto de valor
+                inferior al correspondiente y/o no
+                se ajuste el usuario a las condiciones
+                de su emisión, se le impondrá una
+                multa de: $ 2.800 ARS.
+            </p>
+
+        </main>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            Todos los derechos reservados -
+            República Argentina © 2026.
+
+        </footer>
+
     </div>
+
 </body>
+
 </html>
