@@ -3,24 +3,160 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-    <title>Mapa del recorrido - Trenes Sarmiento</title>
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Mapa del recorrido - Trenes Sarmiento
+    </title>
+
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #dfe3e8;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            background: linear-gradient(to right, #0057b8, #149eea);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+        }
+
+        .logo img{
+            width: 70px;
+        }
+
+        .nav-links{
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover{
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .nav-links li .active{
+            background-color: #37b5ff;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* MAIN */
+
+        .contenido-mapa{
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contenido-mapa h1{
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+
+        .recorrido{
+            background-color: white;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .linea-estaciones{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .estacion{
+            background-color: #e6f4ff;
+            border: 3px solid #0b83d8;
+            color: #004f8c;
+            padding: 14px 18px;
+            border-radius: 30px;
+            font-weight: bold;
+            min-width: 120px;
+        }
+
+        .boton-estacion{
+            background-color: #149eea;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .boton-estacion:hover{
+            background-color: #006bb6;
+            transform: scale(1.08);
+        }
+
+        .especial{
+            background-color: #fff3cd;
+            border-color: #f0ad00;
+            color: #7a5600;
+        }
+
+        .estacion small{
+            font-size: 11px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #0057b8;
+            color: white;
+            font-size: 15px;
+        }
+
+    </style>
+
 </head>
 
 <body>
+
     <div class="contenedorPrincipal">
+
         <!-- NAVBAR -->
+
         <header>
+
             <nav class="navbar">
+
                 <!-- LOGO -->
+
                 <div class="logo">
+
                     <img src="img/iconotrensarmiento.png"
-                    alt="Icono Tren">
+                        alt="Icono Tren">
 
                 </div>
+
                 <!-- LINKS -->
+
                 <ul class="nav-links">
 
                     <li>
@@ -37,8 +173,10 @@
 
                     <li>
                         <a class="active"
-                        href="MapaDelRecorrido.html">
+                            href="MapaDelRecorrido.html">
+
                             Mapa del recorrido
+
                         </a>
                     </li>
 
@@ -62,11 +200,106 @@
 
         <!-- MAIN -->
 
-        <main>
+        <main class="contenido-mapa">
 
             <h1>
                 Mapa del recorrido
             </h1>
+
+            <section class="recorrido">
+
+                <div class="linea-estaciones">
+
+                    <span class="estacion">
+                        Once
+                    </span>
+
+                    <a href="Caballito.html"
+                        class="estacion boton-estacion">
+
+                        Caballito
+
+                    </a>
+
+                    <span class="estacion">
+                        Flores
+                    </span>
+
+                    <a href="Floresta.html"
+                        class="estacion boton-estacion">
+
+                        Floresta
+
+                    </a>
+
+                    <span class="estacion">
+                        Villa Luro
+                    </span>
+
+                    <span class="estacion">
+                        Liniers
+                    </span>
+
+                    <span class="estacion">
+                        Ciudadela
+                    </span>
+
+                    <span class="estacion">
+                        Ramos Mejía
+                    </span>
+
+                    <span class="estacion especial">
+
+                        Haedo
+
+                        <br>
+
+                        <small>
+                            Comb. Línea General Roca
+                            y Haedo-Temperley
+                        </small>
+
+                    </span>
+
+                    <span class="estacion">
+                        Morón
+                    </span>
+
+                    <span class="estacion">
+                        Castelar
+                    </span>
+
+                    <span class="estacion">
+                        Ituzaingó
+                    </span>
+
+                    <span class="estacion">
+                        San Antonio de Padua
+                    </span>
+
+                    <span class="estacion especial">
+
+                        Merlo
+
+                        <br>
+
+                        <small>
+                            Comb. Ramal a Lobos
+                        </small>
+
+                    </span>
+
+                    <span class="estacion">
+                        Paso del Rey
+                    </span>
+
+                    <span class="estacion">
+                        Moreno
+                    </span>
+
+                </div>
+
+            </section>
 
         </main>
 
