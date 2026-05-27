@@ -7,120 +7,139 @@
     content="width=device-width, initial-scale=1.0">
     <title>Tarifas - Trenes Sarmiento</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
     <div class="contenedorPrincipal">
         <!-- NAVBAR -->
         <header>
-
             <nav class="navbar">
                 <!-- LOGO -->
                 <div class="logo">
-                    <img src="img/iconotrensarmiento.png"
-                    alt="Icono Tren">
+                    <img src="img/iconotrensarmiento.png" alt="Icono Tren">
                 </div>
                 <!-- LINKS -->
                 <ul class="nav-links">
-
-                    <li>
-                        <a href="index.html">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="TrenesEnTiempoReal.html">
-                            Trenes en tiempo real
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="MapaDelRecorrido.html">
-                            Mapa del recorrido
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="active"
-                        href="Tarifas.html">
-                            Tarifas
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Contacto.html">
-                            Contacto
-                        </a>
-                    </li>
-
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="TrenesEnTiempoReal.html">Trenes en tiempo real</a></li>
+                    <li><a href="MapaDelRecorrido.html">Mapa del recorrido</a></li>
+                    <li><a class="active" href="Tarifas.html">Tarifas</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
-
             </nav>
-
         </header>
 
         <!-- MAIN -->
-
         <main class="hero">
-
-            <h1>
-                Tarifas
-            </h1>
-
-            <p>
-                Revisá las tarifas de la Línea
-                Sarmiento y conocé cuánto cuesta
-                tu traslado según la distancia.
-            </p>
-
+            <h1>Tarifas</h1>
+            <p>Revisá las tarifas de la Línea Sarmiento y conocé cuánto cuesta tu traslado según la distancia.</p>
             <div class="linea"></div>
 
-            <img src="img/tarifas.jpg"
-            alt="Tarifas Tren Sarmiento">
+            <!-- Imagen optimizada con srcset para evitar pixelado -->
+            <figure class="hero-figure">
+                <img src="img/tarifas.jpg" alt="Tarifas Tren Sarmiento" class="imagen-tarifas">
+            </figure>
 
             <div class="tarifa-texto">
-
                 <p>
-                    Con tarjeta SUBE no registrada
-                    abonás el doble de la tarifa
-                    correspondiente a cada sección.
+                    Con tarjeta SUBE no registrada abonás el doble de la tarifa correspondiente a cada sección.
                 </p>
 
                 <p>
-                    Con la Tarifa Social Federal,
-                    viajás con un 55% de descuento.
+                    Con la Tarifa Social Federal, viajás con un 55% de descuento.
                 </p>
-
             </div>
 
-            <h3>
-                Multa
-            </h3>
-            <p>
-                Pasajero que no acredite haber
-                pagado correctamente, con boleto
-                de fecha vencida o boleto de valor
-                inferior al correspondiente y/o no
-                se ajuste el usuario a las condiciones
-                de su emisión, se le impondrá una
-                multa de: $ 2.800 ARS.
-            </p>
+            <!-- Tarifa por tramos: tabla sencilla y clara -->
+            <section class="tarifas-seccion">
+                <h2>Tarifas por tramo (ejemplo)</h2>
+
+                <div class="tarifa-grid">
+                    <div class="tarifa-card">
+                        <h3>Tramo corto</h3>
+                        <p class="monto">$ 60 ARS</p>
+                        <p class="detalle">Hasta 5 km</p>
+                    </div>
+
+                    <div class="tarifa-card">
+                        <h3>Tramo medio</h3>
+                        <p class="monto">$ 120 ARS</p>
+                        <p class="detalle">6–15 km</p>
+                    </div>
+
+                    <div class="tarifa-card">
+                        <h3>Tramo largo</h3>
+                        <p class="monto">$ 200 ARS</p>
+                        <p class="detalle">16 km o más</p>
+                    </div>
+                </div>
+
+                <table class="tabla-tarifas" aria-label="Tabla de tarifas de ejemplo">
+                    <thead>
+                        <tr>
+                            <th>Origen</th>
+                            <th>Destino</th>
+                            <th>Distancia aprox.</th>
+                            <th>Tarifa estimada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Once</td>
+                            <td>Floresta</td>
+                            <td>4 km</td>
+                            <td>$ 60</td>
+                        </tr>
+                        <tr>
+                            <td>Once</td>
+                            <td>Morón</td>
+                            <td>12 km</td>
+                            <td>$ 120</td>
+                        </tr>
+                        <tr>
+                            <td>Once</td>
+                            <td>Moreno</td>
+                            <td>30 km</td>
+                            <td>$ 200</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="nota-tarifa">
+                    Los valores son **ejemplos** para el MVP. En producción, las tarifas deben obtenerse del sistema tarifario oficial.
+                </p>
+            </section>
+
+            <!-- Multa -->
+            <section class="multas">
+                <h3>Multa</h3>
+                <p>
+                    Pasajero que no acredite haber pagado correctamente, con boleto de fecha vencida o boleto de valor inferior al correspondiente y/o no se ajuste el usuario a las condiciones de su emisión, se le impondrá una multa de: <strong>$ 2.800 ARS</strong>.
+                </p>
+            </section>
+
+            <!-- Preguntas frecuentes rápidas -->
+            <section class="faq-tarifas">
+                <h3>Preguntas frecuentes</h3>
+                <dl>
+                    <dt>¿Cómo pago el boleto?</dt>
+                    <dd>Con tarjeta SUBE en los molinetes o con boleto físico en casos especiales.</dd>
+
+                    <dt>¿Dónde tramito la Tarifa Social?</dt>
+                    <dd>La Tarifa Social Federal se gestiona en los puntos habilitados y a través de la web oficial del programa.</dd>
+
+                    <dt>¿Qué hago si mi SUBE no funciona?</dt>
+                    <dd>Acercate a atención al pasajero en la estación o consultá la sección Contacto para asistencia.</dd>
+                </dl>
+            </section>
 
         </main>
 
         <!-- FOOTER -->
-
         <footer>
-
-            Todos los derechos reservados -
-            República Argentina © 2026.
-
+            Todos los derechos reservados - República Argentina © 2026.
         </footer>
-
     </div>
-
 </body>
 
 </html>

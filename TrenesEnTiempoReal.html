@@ -82,6 +82,105 @@
                 Trenes en tiempo real
             </h1>
 
+            <p class="subtitulo">
+                Estado simulado para MVP — información de ejemplo para mostrar la interfaz.
+            </p>
+
+            <div class="linea"></div>
+
+            <!-- WIDGET PRINCIPAL -->
+            <section class="tiempo-real">
+                <div class="widget-estado">
+                    <h2>Estado del servicio</h2>
+                    <div class="estado-resumen">
+                        <div class="chip normal">Servicio: <strong>Operativo</strong></div>
+                        <div class="chip retraso">Retrasos: <strong>Moderados</strong></div>
+                        <div class="chip obras">Obras: <strong>2 tramos</strong></div>
+                    </div>
+
+                    <p class="nota">
+                        Datos simulados. En una versión productiva estos valores vendrían de una API oficial.
+                    </p>
+                </div>
+
+                <!-- ALERTAS -->
+                <aside class="alertas">
+                    <h3>Alertas recientes</h3>
+                    <ul>
+                        <li><strong>08:15</strong> — Trabajos programados entre Liniers y Morón (duración estimada: 2 h).</li>
+                        <li><strong>07:40</strong> — Tren con demora por incidencia en vía 2 (posibles demoras de 10–20 min).</li>
+                        <li><strong>06:50</strong> — Servicio normal en el resto del ramal.</li>
+                    </ul>
+                </aside>
+            </section>
+
+            <!-- BUSCADOR Y FILTROS -->
+            <section class="buscador-estacion">
+                <h3>Búsqueda rápida por estación</h3>
+                <form class="buscador-mvp" onsubmit="return false;">
+                    <input type="text" id="estacion" placeholder="Escribí una estación (ej. Once)" />
+                    <select id="sentido">
+                        <option value="ida">Sentido Once → Moreno</option>
+                        <option value="vuelta">Sentido Moreno → Once</option>
+                    </select>
+                    <button class="btn-primario" onclick="mostrarProximos()">Buscar</button>
+                </form>
+            </section>
+
+            <!-- PRÓXIMOS TRENES (SIMULADOS) -->
+            <section class="proximos-trenes">
+                <h3>Próximos trenes (ejemplo)</h3>
+
+                <table class="tabla-trenes" aria-label="Próximos trenes">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Origen</th>
+                            <th>Destino</th>
+                            <th>Vía</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-trenes">
+                        <tr>
+                            <td>14:12</td>
+                            <td>Once</td>
+                            <td>Moreno</td>
+                            <td>Vía 3</td>
+                            <td class="estado bueno">A tiempo</td>
+                        </tr>
+                        <tr>
+                            <td>14:25</td>
+                            <td>Once</td>
+                            <td>Moreno</td>
+                            <td>Vía 1</td>
+                            <td class="estado retrasado">Retrasado 12 min</td>
+                        </tr>
+                        <tr>
+                            <td>14:40</td>
+                            <td>Once</td>
+                            <td>Moreno</td>
+                            <td>Vía 2</td>
+                            <td class="estado bueno">A tiempo</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="leyenda">
+                    <strong>Leyenda:</strong> <span class="ley-bueno">A tiempo</span> · <span class="ley-retraso">Retraso</span> · <span class="ley-obras">Obras</span>
+                </p>
+            </section>
+
+            <!-- SUGERENCIAS Y CONSEJOS -->
+            <section class="consejos-mvp">
+                <h3>Consejos rápidos</h3>
+                <ul>
+                    <li>Planificá tu viaje con antelación y consultá esta página antes de salir.</li>
+                    <li>En caso de demoras largas, considerá alternativas (colectivo o trenes cercanos).</li>
+                    <li>Respetá las indicaciones del personal en estaciones y andenes.</li>
+                </ul>
+            </section>
+
         </main>
 
         <!-- FOOTER -->
@@ -91,5 +190,39 @@
             República Argentina © 2026.
         </footer>
     </div>
+
+    <!-- SCRIPT MVP (solo para simular interacción local) -->
+    <script>
+      function mostrarProximos() {
+        const estacion = document.getElementById('estacion').value.trim() || 'Once';
+        const sentido = document.getElementById('sentido').value;
+        const tbody = document.getElementById('lista-trenes');
+
+        // Simulación simple: reemplaza la tabla con ejemplos personalizados
+        tbody.innerHTML = `
+          <tr>
+            <td>14:30</td>
+            <td>${estacion}</td>
+            <td>${sentido === 'ida' ? 'Moreno' : 'Once'}</td>
+            <td>Vía 2</td>
+            <td class="estado bueno">A tiempo</td>
+          </tr>
+          <tr>
+            <td>14:50</td>
+            <td>${estacion}</td>
+            <td>${sentido === 'ida' ? 'Moreno' : 'Once'}</td>
+            <td>Vía 1</td>
+            <td class="estado retrasado">Retrasado 8 min</td>
+          </tr>
+          <tr>
+            <td>15:10</td>
+            <td>${estacion}</td>
+            <td>${sentido === 'ida' ? 'Moreno' : 'Once'}</td>
+            <td>Vía 3</td>
+            <td class="estado bueno">A tiempo</td>
+          </tr>
+        `;
+      }
+    </script>
 </body>
 </html>
