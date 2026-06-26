@@ -1,100 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-
-    <title>Trenes Sarmiento</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visiona Consultora — Inicio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="contenedorPrincipal">
+  <div class="container" role="main">
+    <header>
+      <a class="brand" href="index.html" aria-label="Inicio">
+        <div class="logo" aria-hidden="true">VC</div>
+        <div>
+          <div style="font-weight:800">Visiona Consultora</div>
+          <div style="font-size:13px;color:var(--muted)">Estrategia · Transformación · Resultados</div>
+        </div>
+      </a>
 
-        <!-- NAVBAR -->
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="img/iconotrensarmiento.png" alt="Icono Tren">
-                </div>
-                <ul class="nav-links">
-                    <li><a class="active" href="index.html">Inicio</a></li>
-                    <li><a href="TrenesEnTiempoReal.html">Trenes en tiempo real</a></li>
-                    <li><a href="MapaDelRecorrido.html">Mapa del recorrido</a></li>
-                    <li><a href="Tarifas.html">Tarifas</a></li>
-                    <li><a href="Contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+      <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html" class="cta">Contacto</a>
+      </nav>
+    </header>
 
-        <!-- MAIN -->
-        <main class="hero">
-            <h1>Trenes Sarmiento</h1>
-            <p>Información, horarios, tarifas, recorridos, ramales y estaciones.</p>
-            <div class="linea"></div>
+    <section class="hero" aria-labelledby="titulo-inicio">
+      <div class="hero-card">
+        <div class="kicker">Consultoría estratégica</div>
+        <h1 id="titulo-inicio">Impulsamos decisiones que generan crecimiento</h1>
+        <p class="lead">Combinamos análisis, diseño de procesos y ejecución para transformar ideas en resultados medibles. Equipo multidisciplinario con experiencia en finanzas, tecnología y operaciones.</p>
 
-            <img src="img/trenes.jpg" alt="Tren Sarmiento">
-            <br>
+        <div class="hero-actions">
+          <a class="btn" href="servicios.html">Ver servicios</a>
+          <a class="btn secondary" href="nosotros.html">Conocer al equipo</a>
+        </div>
 
-            <div class="linea"></div>
+        <div class="stats" aria-hidden="true">
+          <div class="stat"><strong>+8 años</strong><span style="color:var(--muted);font-size:13px">experiencia promedio</span></div>
+          <div class="stat"><strong>120+</strong><span style="color:var(--muted);font-size:13px">proyectos</span></div>
+          <div class="stat"><strong>95%</strong><span style="color:var(--muted);font-size:13px">satisfacción</span></div>
+        </div>
+      </div>
+    </section>
 
-            <p>
-                Este sitio tiene como objetivo brindar
-                información sobre el Tren Sarmiento
-                para ayuda de los pasajeros y usuarios.
-            </p>
+    <hr style="border:none;height:1px;background:rgba(255,255,255,0.03);margin:18px 0">
 
-            <p>
-                El Tren Sarmiento es el principal medio
-                de transporte para trasladar pasajeros
-                entre la Ciudad de Buenos Aires y el
-                oeste del conurbano bonaerense.
-            </p>
+    <section aria-labelledby="titulo-casos" style="margin-bottom:18px">
+      <div class="section-title">
+        <h2 id="titulo-casos">Casos de éxito</h2>
+        <div style="color:var(--muted);font-size:13px">Resultados concretos que hablan por sí mismos</div>
+      </div>
 
-            <p>
-                Aquí podés consultar los horarios del
-                Tren Sarmiento, conocer el recorrido
-                completo entre Once y Moreno, ver todas
-                las estaciones del ramal y consultar
-                los precios del boleto.
-            </p>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:18px">
+        <article class="contact-card" aria-labelledby="caso-1">
+          <h3 id="caso-1">Reducción de costos operativos</h3>
+          <p style="color:var(--muted);margin-top:8px">Implementamos mejoras en la cadena de suministro que redujeron costos en 18% y mejoraron la entrega a tiempo.</p>
+        </article>
 
-            <!-- SECCIÓN INFORMACIÓN RÁPIDA -->
-            <section class="info-rapida">
-                <h2>Información rápida</h2>
-                <p>
-                    Consejos útiles para tu viaje: planificá con antelación, revisá el estado del servicio antes de salir y respetá las indicaciones en estaciones.
-                </p>
-                <ul>
-                    <li>Estaciones más concurridas: Once, Floresta, Liniers, Morón, Moreno.</li>
-                    <li>Horarios pico: mañana 7:00–9:30; tarde 17:00–19:30.</li>
-                    <li>Contacto de atención al pasajero: ver sección Contacto.</li>
-                </ul>
-            </section>
-            <br><br><br>
-                <div class="linea"></div>
-                <br><br>
-                <h2>Historia del Tren Sarmiento</h2>
-                <br>
-                <p>
-                  El ramal Sarmiento tiene sus orígenes en el siglo XIX, cuando se trazaron las primeras vías para conectar la Ciudad de Buenos Aires con el oeste del conurbano. A lo largo de las décadas, el servicio fue modernizándose y adaptándose a las necesidades de millones de pasajeros.
-                </p>
-                <p>
-                  Entre hitos importantes se cuentan la electrificación parcial de tramos, la ampliación de estaciones y las obras de renovación de vías y material rodante. El tren ha sido clave para el desarrollo urbano y la movilidad diaria de la región.
-                </p>
-                <p>
-                  Hoy, el Tren Sarmiento combina historia y servicio público, y sigue siendo un eje fundamental para la conectividad entre Once y Moreno.
-                </p>
-              </div>
-            </section>
-        </main>
+        <article class="contact-card" aria-labelledby="caso-2">
 
-        <!-- FOOTER -->
-        <footer>
-            Todos los derechos reservados - República Argentina © 2026.
-        </footer>
+    
 
-    </div>
+    <h3 id="caso-2">
+        Tren Sarmiento
+    </h3>
+
+    <p style="color:var(--muted);margin-top:8px">
+
+        Sitio web desarrollado para brindar información sobre
+        el tren Sarmiento, incluyendo
+        historia, horarios, accesibilidad y contacto.
+
+    </p>
+
+    <a href="https://joaquinhaedo.github.io/trabajoGrupalDIDW/"
+       class="btn"
+       target="_blank">
+
+        Ver proyecto
+
+    </a>
+
+</article>
+
+        <article class="contact-card" aria-labelledby="caso-3">
+          <h3 id="caso-3">Transformación organizacional</h3>
+          <p style="color:var(--muted);margin-top:8px">Diseñamos una estructura por capacidades que mejoró la colaboración entre áreas y aceleró la toma de decisiones.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-recursos" style="margin-bottom:28px">
+      <div class="section-title">
+        <h2 id="titulo-recursos">Recursos y novedades</h2>
+        <div style="color:var(--muted);font-size:13px">Artículos breves, guías y eventos</div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:2fr 1fr;gap:18px">
+        <div class="contact-card">
+          <h3>Artículo destacado: Cómo priorizar iniciativas digitales</h3>
+          <p style="color:var(--muted);margin-top:8px">Una guía práctica para seleccionar proyectos con mayor impacto y menor riesgo, con checklist para la evaluación rápida.</p>
+          <button class="btn" type="button" disabled style="margin-top:12px;display:inline-block">Leer artículo</button>
+        </div>
+
+        <aside class="contact-card" aria-labelledby="newsletter">
+          <h3 id="newsletter">Suscribite al newsletter</h3>
+          <p style="color:var(--muted);margin-top:8px">Recibí insights mensuales y casos prácticos en tu correo.</p>
+          <form style="margin-top:12px" aria-label="Formulario de suscripción" onsubmit="return false;">
+            <label for="email-news" class="text-muted">Email</label>
+            <input id="email-news" type="email" name="email" placeholder="tu@correo.com" disabled>
+            <button class="btn" type="button" disabled>Suscribirme</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <hr style="border:none;height:1px;background:rgba(255,255,255,0.03);margin:18px 0">
+
+    <section aria-labelledby="titulo-testimonios">
+      <div class="section-title">
+        <h2 id="titulo-testimonios">Testimonios</h2>
+        <div style="color:var(--muted);font-size:13px">Lo que dicen nuestros clientes</div>
+      </div>
+
+      <div class="testimonials" role="list">
+        <div class="testimonial" role="listitem">
+          <strong>Empresa Alfa</strong>
+          <p style="margin-top:8px;color:var(--muted)">"La consultora nos ayudó a definir prioridades y ejecutar con rapidez; los resultados superaron nuestras expectativas."</p>
+        </div>
+        <div class="testimonial" role="listitem">
+          <strong>Startup Beta</strong>
+          <p style="margin-top:8px;color:var(--muted)">"Excelente acompañamiento técnico y estratégico. Equipo práctico y orientado a resultados."</p>
+        </div>
+        <div class="testimonial" role="listitem">
+          <strong>Industria Gamma</strong>
+          <p style="margin-top:8px;color:var(--muted)">"Redujimos costos y mejoramos tiempos de entrega gracias a su trabajo en procesos."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección vacía adicional: doble altura del pie de página -->
+    <div class="spacer" aria-hidden="true" style="height: calc(var(--footer-height) * 2);"></div>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="left">© <strong>Visiona Consultora</strong> <span style="color:var(--muted)">2026</span></div>
+        <div class="right" style="color:var(--muted)">Todos los derechos reservados</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
